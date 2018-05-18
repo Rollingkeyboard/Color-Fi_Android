@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ragnar.prototypingappv300.CameraActivity">
+<RelativeLayout
+    android:id="@+id/clickon_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000"
+        android:id="@+id/layout_area_top"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:id="@+id/btn_flash"
+            android:layout_alignParentLeft="true"
+            android:padding="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_flash_off_black_24dp"/>
+        <ImageView
+            android:id="@+id/btn_cam_switch"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_switch_camera_black_24dp"/>
+    </RelativeLayout>
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_above="@+id/layout_area_bottom"
+        android:layout_below="@+id/layout_area_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#000"
+        android:id="@+id/layout_area_bottom"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_exit"
+            android:src="@drawable/ic_exit_to_app_black_24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/btn_take_pic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_photo_camera_black_24dp" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_lib"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_photo_library_black_24dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    
+</RelativeLayout>
+</FrameLayout>
